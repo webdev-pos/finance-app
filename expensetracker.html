@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">¨
+    <link rel="stylesheet" href="expensetracker.css">
+    <title>Expense Tracker</title>
+</head>
+<body>
+    <div class="top">
+        <form class="form" autocomplete="off">
+            <p class="title">Expense Tracker</p>
+            <p class="add-item">Add A New Item:</p>
+            <div class="name-div">
+                <label for="name">Name:</label>
+                <input type="text" id="name-input" class="name-input">
+            </div>
+            <div class="next-line">
+                <label for="date">Date:</label>
+                <input type="date" id="date-input" class="date-input" min="1900-01-01" max="2025-01-01">
+                <label for="amount">Amount:</label>
+                <input type="text" id="amount-input" class="amount-input">
+            </div>
+        </form>
+        <p class="error" id="error">Error</p>
+        <button id="add-btn" class="add-btn">Add Expense</button>
+    </div>
+
+    <table class="table" id="table">
+        <tbody id="tbody">
+            <tr>
+                <th class="name" id="name-th">Name</th>
+                <th class="date" id="date-th">Date</th>
+                <th class="amount" id="amount-th">Amount</th>
+                <th class="button" id="button-th"></th>
+            </tr>
+            <tr>
+                <td class="name-value" id="name-td">No expenses added yet!</td>
+                <td class="date-value" id="date-td">No expenses added yet!</td>
+                <td class="amount-value" id="amount-td">No expenses added yet!</td>
+                <td class="button-value" id="button-td"></td>
+            </tr>
+        </tbody>
+    </table>
+    
+
+
+    <script src="expensetracker.js"></script>
+</body>
+</html>
