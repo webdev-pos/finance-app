@@ -43,14 +43,14 @@ function addExpense() {
     }
 
     button.addEventListener("click", function() {
-        removeExpense()
+        removeExpense();
     })
 
 }
 
 function error() {
     errorP.style.display = "flex";
-    errorP.style.justifyContent = "center"
+    errorP.style.justifyContent = "center";
 }
 
 function removePlaceholders() {
@@ -58,16 +58,14 @@ function removePlaceholders() {
     let date = dateInput.value;
     let amount = amountInput.value;
     if(nameInput.value === "" | dateInput.value === "" | amountInput.value === "") {
-        error()
+        error();
     } else {
         errorP.style.display = "none";
         nameTableData.parentElement.remove();
         addExpense();
     }
-
-    //take table and add values to it
 }
 
 addBtn.addEventListener("click", function() {
-    removePlaceholders()
+    removePlaceholders();
 })
